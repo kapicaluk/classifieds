@@ -11,7 +11,7 @@ const images = [
 
 const getRandomImage = () => images[Math.floor(Math.random() * images.length)];
 
-module.exports = db.define('author', {
+module.exports = db.define('sellers', {
   name: {
     type: Sequelize.STRING,
     allowNull: false
