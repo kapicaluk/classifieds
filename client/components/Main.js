@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import AllListings from './AllListings'
 
 
 export default class Main extends Component {
@@ -18,16 +19,9 @@ componentDidMount(){
 
   render() {
     return (
-      <div>
-			<h1>All listings</h1>
-			{this.state.listings && this.state.listings.map((listing,idx) => {
-				return (
-					<div key="idx"
-				<h1>{listing.title}</h1>
-				<h3>{listing.description}</h3>
-				</div>)
-			})}
-      </div>
+			<div>
+			<AllListings listings={this.state.listings} />
+			</div>
     );
   }
 }
