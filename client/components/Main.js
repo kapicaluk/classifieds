@@ -1,27 +1,13 @@
-import React, { Component } from 'react';
-import axios from 'axios'
-import AllListings from './AllListings'
+import React from 'react';
+import axios from 'axios';
+import AllListings from './AllListings';
 
-
-export default class Main extends Component {
-  constructor(props) {
-    super(props);
-		this.state = {
-			listings: []
-		}
-  }
-componentDidMount(){
-	axios.get('/api/listings')
-	.then(response => response.data)
-	.then(listings => this.setState({listings}))
-	.then(console.log('done!'))
-}
-
-  render() {
+const main = () => {
     return (
-			<div>
-			<AllListings listings={this.state.listings} />
-			</div>
+      <div>
+        <AllListings />
+      </div>
     );
-  }
 }
+
+export default main
