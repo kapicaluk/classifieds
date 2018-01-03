@@ -1,10 +1,10 @@
 import React from 'react';
-import axios from 'axios';
 import AllListings from './AllListings';
-
+import Navbar from './Navbar'
 const main = () => {
     return (
       <div>
+        <Navbar />
         <AllListings />
       </div>
     );

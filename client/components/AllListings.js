@@ -30,19 +30,22 @@ export default class AllListings extends Component {
     });
 
     return (
-      <div className="container">
-        <h1>All listings</h1>
-        <div>
-          <input
-            className="search"
-            type="text"
-            value={this.state.search}
-            onChange={this.updateSearch.bind(this)}
-          />
-          <hr />
-        </div>
-        {filterdListings &&
-          filterdListings.map(listing => {
+    <div className="all-listings">
+    <div className="search-container">
+    <input
+    className="search-input"
+    placeholder="Enter your search term..."
+    type="search"
+    value=""
+    name="search"
+    id="search"
+    value={this.state.search}
+    onChange={this.updateSearch.bind(this)}
+    />
+    </div>
+    <div>
+    {filterdListings &&
+      filterdListings.map(listing => {
             return (
               <div key={listing.id}>
                 <h2>{listing.title}</h2>
@@ -51,7 +54,8 @@ export default class AllListings extends Component {
               </div>
             );
           })}
-      </div>
+     </div>
+     </div>
     );
   }
 }
