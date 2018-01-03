@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import Navbar from './Navbar'
 
 export default class AllListings extends Component {
   constructor() {
@@ -30,7 +31,8 @@ export default class AllListings extends Component {
     });
 
     return (
-    <div className="all-listings">
+    <div id="listings">
+    <Navbar />
     <div className="search-container">
     <input
     className="search-input"
@@ -43,7 +45,7 @@ export default class AllListings extends Component {
     onChange={this.updateSearch.bind(this)}
     />
     </div>
-    <div>
+    <div className="listings-all">
     {filterdListings &&
       filterdListings.map(listing => {
             return (

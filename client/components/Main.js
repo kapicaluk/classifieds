@@ -3,8 +3,7 @@ import AllListings from './AllListings';
 import Navbar from './Navbar'
 const main = () => {
     return (
-      <div>
-        <Navbar />
+      <div id="main">
         <AllListings />
       </div>
     );

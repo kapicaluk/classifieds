@@ -1,7 +1,7 @@
 import React from "react";
 const Navbar = () => {
   return (
-    <div>
+    <div id="navigation">
       <nav className="navbar">
         <ul>
           <a href="http://google.com"><li>Profile</li></a>
